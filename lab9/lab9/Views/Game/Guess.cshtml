@@ -1,0 +1,14 @@
+@{
+    ViewData["Title"] = "Gra";
+}
+
+<main>
+    <section class='@(ViewBag.sectionClass)'>
+        @Html.Raw(ViewBag.result)
+    </section>
+    @if (!ViewBag.found) {
+        <partial name="_GuessForm" />
+    }
+    <partial name="_DrawForm"/>
+    <partial name="_SetForm"/>
+</main>
